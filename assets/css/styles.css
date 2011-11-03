@@ -1,0 +1,161 @@
+body,ul,li {
+    padding:0;
+    margin:0;
+    border:0;
+}
+ 
+body {
+    font-family:helvetica;
+}
+ 
+header{
+    background-color:#deb500;
+    position:absolute;
+    z-index:2;
+    top:0; left:0;
+    width:100%;
+    height:45px;
+    padding:0;
+}
+ 
+footer {
+    background-color:#c27b00;
+    position:absolute;
+    z-index:2;
+    bottom:0; left:0;
+    width:100%;
+    height:48px;
+    padding:0;
+    border-top:1px solid #444;
+}
+ 
+header, footer{
+    font-size:20px;
+    text-align:center;
+    color:#f3f3f3;
+    font-weight:bold;
+    text-shadow:0 -1px 0 rgba(0,0,0,0.5);
+    line-height:45px;
+}
+
+/*** CHANGES BELOW ***/
+ 
+.page {
+    position:absolute;
+    z-index:1;
+    top:45px; bottom:48px; left:0;
+    width:100%;
+    background:#fff;
+    overflow:auto;
+    display: none;
+}
+
+.page.current{
+	display: block;
+}
+ 
+.scroll-content {
+    position:absolute;
+    z-index:1;
+    width:100%;
+    padding:0;
+}
+
+/*** CHANGES ABOVE ***/
+ 
+ul {
+    list-style:none;
+    padding:0;
+    margin:0;
+    width:100%;
+    text-align:left;
+}
+ 
+li, div#pullDown {
+    padding:0 10px;
+    height:40px;
+    line-height:40px;
+    border-bottom:1px solid #ccc;
+    border-top:1px solid #fff;
+    background-color:#fafafa;
+    font-size:14px;
+}
+
+.pageLink{
+	color:#444;
+	font-weight:bold;
+}
+
+.page-content{
+	padding:10px;
+	background-color: white;
+	height:100%;
+}
+
+/** SCROLLBAR **/
+
+.myScrollbarV {
+	position:absolute;
+	z-index:100;
+	width:8px;bottom:7px;top:2px;right:1px
+}
+
+.myScrollbarV > div {
+	position:absolute;
+	z-index:100;
+	width:100%;
+
+	background:-webkit-gradient(linear, 0 0, 100% 0, from(#deb700), to(#c17c00));
+	border:1px solid #800;
+	-webkit-background-clip:padding-box;
+	-webkit-box-sizing:border-box;
+	-webkit-border-radius:4px;
+	-webkit-box-shadow:inset 1px 1px 0 rgba(255,255,255,0.5);
+}
+
+#snap {
+    width:300px;
+    height:160px;
+    float:left;
+    position:relative;
+    z-index:1;
+    overflow:hidden;
+    background:#aaa;
+    background:#e3e3e3;
+    margin:2%;
+}
+
+#snap .scroll-content {
+    width:1200px;
+    height:100%;
+    float:left;
+    padding:0;
+}
+
+#snap .scroll-content ul {
+    list-style:none;
+    display:block;
+    float:left;
+    width:100%;
+    height:100%;
+    padding:0;
+    margin:0;
+    text-align:left;
+}
+
+#snap .scroll-content li {
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    -o-box-sizing:border-box;
+    box-sizing:border-box;
+    display:block; float:left;
+    width:300px; height:160px;
+    text-align:center;
+    font-family:georgia;
+    font-size:35px;
+    line-height:140%;
+    border-bottom:0;
+    background:#deb700;
+    color:#f3f3f3;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.5);
+}
